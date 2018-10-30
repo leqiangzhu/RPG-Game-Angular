@@ -2,6 +2,14 @@
 
 <div class='playerForm'>
   <label for='player'>Name</label>
-  <input #newPlayer>
-  <button (click)="createNewPlayer(newPlayer.value)">Create</button>
+  <input #newPlayer><br>
+  <label>Level Start:</label>
+  <select #newLevel>
+      <option value='1'>1</option>
+      <option value='2'>2</option>
+      <option value='3'>3</option>
+      <option value='4'>4</option>
+      <option value='5'>5</option>                        
+  </select>
+  <button (click)="createNewPlayer(newPlayer.value, newLevel.value)">Create</button>
 </div>

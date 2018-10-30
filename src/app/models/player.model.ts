@@ -1,12 +1,14 @@
 export class Player {
     public score: number;
-    public level: number;
-    constructor(public name: string) {
+    constructor(public name: string, public level: number) {
         this.score = 0;
-        this.level = 1;
+        this.level = level;
     }
 
     rewardPoints(points: number) {
         this.score += points;
     }
+
+
+
 }

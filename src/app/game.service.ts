@@ -5,8 +5,12 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 @Injectable()
 export class GameService {
   questions: FirebaseListObservable<any[]>;
+  questionToAsk: FirebaseListObservable<any[]>;
+
+
   constructor(private database: AngularFireDatabase) {
-    this.questions = database.list('questions');    
+    this.questions = database.list('questions'); 
+    this.questionToAsk = database.list('questions');   
   }
 
     getQuestions() {
@@ -29,5 +33,24 @@ export class GameService {
         level: localQuestion.level,
         points: localQuestion.points
       });
+    }
+
+    getQuestionByLevel(playerLevel: number) {
+      let filteredList;
+      this.questionToAsk.forEach(question => {
+        if(question[0].level!=1){
+          alert("hahah");
+        }
+    
+        console.log(question);
+      });
+     
+      console.log(this.questionToAsk);
+      // this.questionToAsk.forEach(question => {
+      //   if (question[0].level === playerLevel) {
+      //     filteredList.push(question);
+      //   }
+      // });
+      return filteredList;
     }
 }
