@@ -1,0 +1,11 @@
+{ "questions": [{
+    "question": "What is 2 + 2?",
+    "answer": 4
+    }, {
+    "question": "What is 3 X 3?",
+    "answer": 9
+      }, {
+    "question": "What is 3 feet in inches?",
+    "answer": 36
+  }]
+}
