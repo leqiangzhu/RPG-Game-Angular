@@ -10,6 +10,9 @@ import { routing } from './app.routing';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminEditQuestionComponent } from './admin-edit-question/admin-edit-question.component';
+import { NewPlayerComponent } from './new-player/new-player.component';
+import { GameComponent } from './game/game.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -23,7 +26,10 @@ export const firebaseConfig = {
     AppComponent,
     WelcomeComponent,
     AdminComponent,
-    AdminEditQuestionComponent
+    AdminEditQuestionComponent,
+    NewPlayerComponent,
+    GameComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

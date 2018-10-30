@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: darkgray;
+    background-image: url(https://playdauntless.com/images/media-wallpapers/shrike-soaring-wallpaper-dauntless-1920x1200.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: 100px;
+}

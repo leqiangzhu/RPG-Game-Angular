@@ -1,0 +1,16 @@
+.welcome {
+    background-color: black;
+    height: 350px;
+    justify-content: center;
+    text-align: center;
+    opacity: 0.5;
+    filter: alpha(opacity=30);
+
+}
+
+.words {
+    opacity: 1.0;
+    filter: alpha(opacity=100);    
+    font-size: 40px;
+    color: white;
+}

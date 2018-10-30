@@ -1,0 +1,6 @@
+
+  <app-new-player *ngIf="player == null" (PlayerSender)=newPlayer($event)></app-new-player>
+  <div *ngIf="player != null">
+    <p>game begins!!!!</p>
+  </div>
+

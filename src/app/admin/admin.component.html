@@ -1,15 +1,15 @@
-<a routerLink="">HOME</a>
+<br>
 <div class='container'>
   <div class="row">
-    <div class="col-9">
+    <div class="col-9 col">
       <div *ngFor="let question of questions | async" class="panel panel-default">
         <div class="panel-body">
-          <h3><em>Level {{question.level}} - Question: {{question.question}}</em> --Answer: {{question.answer}} --
-            {{question.points}} <button (click)='selectQuestiontoUpdate(question)'>Edit</button></h3>
+          <h5><em>Level {{question.level}} - Question: {{question.question}}</em> --Answer: {{question.answer}} --
+            {{question.points}} <button (click)='selectQuestiontoUpdate(question)'>Edit</button></h5>
         </div>
       </div>
     </div>
-    <div class="col-3">
+    <div class="col-3 col">
 
       <p>
         ADD QUESTIONS
