@@ -1,0 +1,30 @@
+<p>
+  Edit QUESTIONS
+</p>
+<h3>Edit New Question to Inventory</h3>
+<div>
+  <div>
+    <label>Question Title:</label>
+    <br>
+    <input [(ngModel)]="selectedQuestion.question" #editQuestion>
+  </div>
+
+  <div>
+    <label>Question Answer:</label>
+    <br>
+    <input [(ngModel)]="selectedQuestion.answer" #editAnswer>
+  </div>
+
+  <div>
+    <label>Question Level:</label>
+    <br>
+    <input [(ngModel)]="selectedQuestion.level" #editLevel>
+  </div>
+  <div>
+    <label>Question Point:</label>
+    <br>
+    <input [(ngModel)]="selectedQuestion.points" #editPoint>
+  </div>
+  <button (click)="beginUpdatingQuestion(selectedQuestion);
+    editQuestion.value=''; editAnswer.value=''; editLevel.value='';editPoint.value='' ">Update
+  </button>

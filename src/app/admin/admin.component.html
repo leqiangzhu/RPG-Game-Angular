@@ -1,0 +1,47 @@
+<a routerLink="">HOME</a>
+<div class='container'>
+  <div class="row">
+    <div class="col-9">
+      <div *ngFor="let question of questions | async" class="panel panel-default">
+        <div class="panel-body">
+          <h3><em>Level {{question.level}} - Question: {{question.question}}</em> --Answer: {{question.answer}} --
+            {{question.points}} <button (click)='selectQuestiontoUpdate(question)'>Edit</button></h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+
+      <p>
+        ADD QUESTIONS
+      </p>
+      <h3>Add New Question to Inventory</h3>
+      <div>
+        <div>
+          <label>Question Title:</label>
+          <br>
+          <input #newQuestion>
+        </div>
+
+        <div>
+          <label>Question Answer:</label>
+          <br>
+          <input #newAnswer>
+        </div>
+
+        <div>
+          <label>Question Level:</label>
+          <br>
+          <input #newLevel>
+        </div>
+        <div>
+          <label>Question Point:</label>
+          <br>
+          <input #newPoint>
+        </div>
+        <button (click)="submitForm(newQuestion.value, newAnswer.value, newLevel.value,newPoint.value); newQuestion.value=''; newAnswer.value=''; newLevel.value='';newPoint.value='' ">Add</button>
+      </div>
+      <app-admin-edit-question *ngIf="selectedQuestion" [selectedQuestion]="selectedQuestion"></app-admin-edit-question>
+
+    </div>
+  </div>
+</div>

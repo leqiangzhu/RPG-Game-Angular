@@ -8,6 +8,8 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AppComponent } from './app.component';
 import { routing } from './app.routing';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { AdminComponent } from './admin/admin.component';
+import { AdminEditQuestionComponent } from './admin-edit-question/admin-edit-question.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -19,7 +21,9 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    AdminComponent,
+    AdminEditQuestionComponent
   ],
   imports: [
     BrowserModule,
